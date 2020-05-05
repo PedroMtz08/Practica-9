@@ -1,0 +1,106 @@
+HolaMundo.py
+-------------------------------------------------------------------------------------------------------------------------------------------
+#Este es un comentario en python 
+"""
+Este es un comentario de
+varias lineas
+"""
+
+
+print("Este es mi primer **Hola mundo** en python :) ")
+x = 10
+print(type(x)) #tipo int
+print(x)
+x = y = z = 2.4
+print(x,y,z)
+print(type(x)) #tipo float
+x = "cadena"  #cambio x a tipo cadena
+print (type(x))
+
+c1 = "holis"
+c2 = "Pedro"
+saludo = c1 + " " + c2 #Concatenando cadenas 
+print(saludo)
+
+saludo2 = "{} {} {}".format(c1, c2, 3) #las llaves indican que vamos a poner algo en ellas
+print(saludo2)
+
+saludo3 = "Cambio de orden {1} {2} {0}".format(c1, c2, 3) #el 1,2 y 0 va a ser el orden de impresion
+print(saludo3)
+----------------------------------------------------------------------------------------------------------------------------------------
+Calculadora.py
+----------------------------------------------------------------------------------------------------------------------------------------
+#Lo que va entre parentesis es lo que va a recibir 
+#En lugar de poner llaves van los ":"
+
+def sumar(a, b): 
+    c = a + b
+    return c
+
+def restar(a, b):
+    return a-b
+
+def multiplicar(a, b):
+    return a*b
+
+def div_entera(a, b):
+    if b == 0: #No hay parentesis en if 
+        print("Error division sobre 0")
+        return #retorno porque no se puede hacer la division
+    return a//b
+
+def division(a, b):
+    if b == 0: 
+        print("Error division sobre 0")
+        return 
+    return a/b #Division para Reales es una barra
+
+def modulo(a, b):
+     if b == 0: 
+        print("Error division sobre 0")
+        return 
+    return a%b
+
+def potencia(a, b): #Este operador no tiene C
+    return a**b
+
+def manin():
+    print("Ingresa los valores, porfavor")
+    x = int(input()) #Input lee desde el teclado
+    y = int(input())
+
+    print("1. sumar\n 2. restar\n 3.division entera")
+    print("4. division\n 5. modulo\ 6.potencia\n 7.multiplicar\n 8. Salir\n")
+    op = int(input())
+
+while op == 1 && op < 8:
+
+    if op == 1:
+        print(sumar(x, y))
+    elif op == 2:
+        print(restar(x, y))
+    elif op == 3:
+        print(div_entera(x, y))
+    elif op == 4:
+        print(division(x, y))
+    elif op == 5:
+        print(modulo(x, y))
+    elif op == 6:
+        print(potencia(x, y))
+    elif op == 7:
+        print(multiplicar(x, y))
+    elif op == 8:
+        break
+else:
+     print("Opcion no valida")
+
+if __name__ == "main": #Si este archivo se ejecuta llamando a calculadora.py se manda a llamar a a main
+    main()
+
+"""
+var = True
+var = False
+
+&&   ||
+and  or
+"""
